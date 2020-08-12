@@ -1,0 +1,180 @@
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="../../favicon.ico">
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162139659-1"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'UA-162139659-1');
+      </script>
+      <title>Academus - Next generation scientific article reader</title>
+      <link href="{{ url_for('static',filename='styles/css/css') }}" rel="stylesheet">
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+      <!-- Custom styles for this template -->
+      <link rel="stylesheet" type="text/css" href="blog.css">
+      <link rel="stylesheet" type="text/css" href="stylesheet.css">
+      <!--   icons & fonts-->
+      <script src="https://kit.fontawesome.com/02a54db174.js" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="blog-masthead">
+            <div>
+               <nav class="blog-nav">
+                  <a class="blog-nav-item" href="{{ url_for('index_page')}}"><img src="assets/logo_small_v1.png" width="35"></a>
+                  <!--          <a class="blog-nav-item active" href="{{ url_for('index_page')}}">Home</a>-->
+               </nav>
+            </div>
+         </div>
+         <!--Search background-->
+         <div class="home-page-outer">
+            <div class="home-page-inner">
+               <div>
+                  <a class="" href="{{ url_for('index_page')}}"><img src="assets/logo_large_v1.png" class="home-page-logo"></a>
+               </div>
+               <div class="home-page-slogan">
+                  Interactive. Intelligent.<br>The next generation scientific article reader.
+               </div>
+               <!--Form and button-->
+               <form class="" action="{{ url_for('visit_article')}}" method="post">
+                  <div class="input-group input-group-lg">
+                     <input type="text" name="query" value="" class="form-control" placeholder="Read on arXiv now" autofocus="">
+                     <span class="input-group-btn">
+                     <button type="submit" class="btn btn-primary">Go</button>
+                     </span>
+                  </div>
+               </form>
+               <!--Form and button ends-->    
+            </div>
+         </div>
+         <!--Search background ends-->
+         <div class="home-page-bottom">
+            <!--New articles list-->    
+            <div class="categories">
+               <h5>LATEST ON ARXIV</h5>
+               <div class="container">
+                  <!--
+                     <div class="row">
+                       {% for field in fields %}
+                         <div class="col-sm-12 col-lg-6">
+                          <a href="{{url_for('listings', category_name = field.abbreviation)}}" target="_blank">{{field.field}}</a>
+                         </div>
+                       {% endfor %}
+                     </div>
+                     -->
+                  <!--    test-->
+                  <div class="row">
+                     <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="btn-group">
+                           <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Science
+                           </button>
+                           <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Astrophysics</a>
+                              <a class="dropdown-item" href="#">Computer Science</a>
+                              <a class="dropdown-item" href="#">Electrical Engineering and Systems Science</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="btn-group">
+                           <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Physics
+                           </button>
+                           <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Condensed Matter</a>
+                              <a class="dropdown-item" href="#">Mathematical Physics</a>
+                              <a class="dropdown-item" href="#">Nuclear Theory</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="btn-group">
+                           <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Social Science
+                           </button>
+                           <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Economics</a>
+                              <a class="dropdown-item" href="#">Quantitative Biology</a>
+                              <a class="dropdown-item" href="#">Quantitative Finance</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="btn-group">
+                           <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           More
+                           </button>
+                           <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">General Relativity and Quantum Cosmology</a>
+                              <a class="dropdown-item" href="#">Nuclear Experiment </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!--test ends-->
+               </div>
+            </div>
+            <!--New articles list ends-->
+            <!--About us section-->
+            <div class="home-page-about">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-4 col-md-4 box-shadow">
+                        <i class="fas fa-book-open fa-2x"></i>
+                        <h5>Interactive Reading</h5>
+                        <div class="about-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+                     </div>
+                     <div class="col-lg-4 col-md-4 box-shadow">
+                        <i class="fas fa-clipboard fa-2x"></i>
+                        <h5>Annotations and Notes</h5>
+                        <div class="about-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+                     </div>
+                     <div class="col-lg-4 col-md-4 box-shadow">
+                        <i class="fas fa-bullhorn fa-2x"></i>
+                        <h5>Coming Soon</h5>
+                        <div class="about-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--About us section ends-->
+         </div>
+         <footer class="blog-footer footer-fixed">
+            <p>
+               <a href="{{ url_for('index_page')}}#">BACK TO TOP</a>
+            </p>
+            <div class="social-icons">
+               <a href="#"><span class="fab fa-facebook-f fa-lg"></span></a>
+               <a href="#"><span class="fab fa-twitter fa-lg"></span></a>
+               <a href="#"><span class="fab fa-linkedin-in fa-lg fa-lg"></span></a>
+               <a href="#"><span class="fab fa-pinterest fa-lg"></span></a>
+            </div>
+         </footer>
+      </div>
+      <!-- Bootstrap core JavaScript
+         ================================================== -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   </body>
+</html>
