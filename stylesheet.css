@@ -72,32 +72,11 @@ border: none;
 }
 
 /*Front-page CSS*/
-@media only screen and (max-width: 800px) {
-    .home-page-logo{
-        width: 270px !important;
-    }
-    .home-page-inner form {
-        width: 380px;
-        margin: auto;
-        padding-bottom: 40px !important;
-    }
-
-}
 @media only screen and (max-width: 450px) {
-    body {
-        font-size: 1.4em;
-    }
-    .home-page-logo{
-        width: 250px !important;
-    }
-    
     .home-page-inner form {
         width: 290px;
         margin: auto;
         padding-bottom: 30px !important;
-    }
-    .home-page-slogan {
-        font-size: 1.2em;
     }
     
 }
