@@ -49,15 +49,15 @@
                   Interactive. Intelligent.<br>The next generation scientific article reader.
                </div>
                <!--Form and button-->
-               <form class="" action="{{ url_for('visit_article')}}" method="post">
-                  <div class="input-group input-group-lg">
-                     <input type="text" name="query" value="" class="form-control" placeholder="Read on arXiv now" autofocus="">
-                     <span class="input-group-btn">
-                     <button type="submit" class="btn btn-primary">Go</button>
-                     </span>
-                  </div>
-               </form>
-               <!--Form and button ends-->    
+          <form class="" action="{{ url_for('visit_article')}}" method="post">
+            <div class="input-group input-group-lg">
+              <input type="text" name="query" value="" class="form-control" placeholder="2001.00001" autofocus="">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary">Go</button>
+              </span>
+            </div>
+          </form>
+      <!--Form and button ends-->       
             </div>
          </div>
          <!--Search background ends-->
@@ -82,7 +82,7 @@
                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            Science
                            </button>
-                           <div class="dropdown-menu">
+                           <div class="dropdown-menu dropdown-menu-center">
                               <a class="dropdown-item" href="#">Astrophysics</a>
                               <a class="dropdown-item" href="#">Computer Science</a>
                               <a class="dropdown-item" href="#">Electrical Engineering and Systems Science</a>
@@ -94,7 +94,7 @@
                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            Physics
                            </button>
-                           <div class="dropdown-menu">
+                           <div class="dropdown-menu dropdown-menu-center">
                               <a class="dropdown-item" href="#">Condensed Matter</a>
                               <a class="dropdown-item" href="#">Mathematical Physics</a>
                               <a class="dropdown-item" href="#">Nuclear Theory</a>
@@ -108,7 +108,7 @@
                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            Social Science
                            </button>
-                           <div class="dropdown-menu">
+                           <div class="dropdown-menu dropdown-menu-center">
                               <a class="dropdown-item" href="#">Economics</a>
                               <a class="dropdown-item" href="#">Quantitative Biology</a>
                               <a class="dropdown-item" href="#">Quantitative Finance</a>
@@ -120,7 +120,7 @@
                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            More
                            </button>
-                           <div class="dropdown-menu">
+                           <div class="dropdown-menu dropdown-menu-center">
                               <a class="dropdown-item" href="#">General Relativity and Quantum Cosmology</a>
                               <a class="dropdown-item" href="#">Nuclear Experiment </a>
                            </div>
@@ -135,17 +135,17 @@
             <div class="home-page-about">
                <div class="container">
                   <div class="row">
-                     <div class="col-lg-4 col-md-4 box-shadow">
+                     <div class="col-lg-4 col-md-4 col-sm-12 box-shadow">
                         <i class="fas fa-book-open fa-2x"></i>
                         <h5>Interactive Reading</h5>
                         <div class="about-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
                      </div>
-                     <div class="col-lg-4 col-md-4 box-shadow">
+                     <div class="col-lg-4 col-md-4 col-sm-12 box-shadow">
                         <i class="fas fa-clipboard fa-2x"></i>
                         <h5>Annotations and Notes</h5>
                         <div class="about-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
                      </div>
-                     <div class="col-lg-4 col-md-4 box-shadow">
+                     <div class="col-lg-4 col-md-4 col-sm-12 box-shadow">
                         <i class="fas fa-bullhorn fa-2x"></i>
                         <h5>Coming Soon</h5>
                         <div class="about-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
