@@ -421,7 +421,15 @@ tr:hover {
 	transform: translateY(-2px);
 }
 
-
+@media only screen and (max-width: 767px) {
+    .home-page-bottom {
+        margin:20px 5px !important;
+    }
+    
+    .about-description {
+        margin:0px;
+    }
+}
 /*Categories*/
 
 .categories h5,
@@ -439,6 +447,7 @@ tr:hover {
 .dropdown-toggle:hover {
 	color: #1b3564;
 }
+
 
 .btn.focus,
 .btn:focus {
@@ -471,6 +480,15 @@ tr:hover {
 
 .dropdown-menu a:hover {
 	background-color: #555;
+}
+
+.dropdown-menu-center {
+    top: 40px !important;
+    right: auto !important;
+    left: 50% !important;
+    -webkit-transform: translate(-50%, 0) !important;
+    -o-transform: translate(-50%, 0) !important;
+    transform: translate(-50%, 0) !important;
 }
 
 @keyframes drop {
